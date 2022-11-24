@@ -57,10 +57,10 @@ pos = ['dem Dude einen 5 Euro Schein in die Hand drücken', 'sich von dem Dude l
 let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tun?');
   if (answer === 0) {
       sidar.presents.push("Beutel schwarzer Tee")
-      console.log('Sidar kramt einen 5 Euro Schein aus seiner Jackentasche und drückt diesen dem vermeintlichen Penner in die Hand. Etwas überrascht schaut sich der Dude den Schein an, steckt ihn weg und fummelt etwas aus seinen Lumpen.');
-      console.log("Es ist ein Beutel schwarzer Tee welchen der Penner Sidar mit heftigem nicken in die Hand drückt.");
+      console.log('\nSidar kramt einen 5 Euro Schein aus seiner Jackentasche und drückt diesen dem vermeintlichen Penner in die Hand. Etwas überrascht schaut sich der Dude den Schein an, steckt ihn weg und fummelt etwas aus seinen Lumpen.');
+      console.log("\nEs ist ein Beutel schwarzer Tee welchen der Penner Sidar mit heftigem nicken in die Hand drückt.");
       
     
   } else {
-    console.log('Sidar löst sich mit einem Schwung aus dem Griff des Penners und setzt seinen Weg um einige Schritte schneller zum Gleis fort,');
+    console.log('\nSidar löst sich mit einem Schwung aus dem Griff des Penners und setzt seinen Weg um einige Schritte schneller zum Gleis fort,');
   }
