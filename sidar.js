@@ -75,6 +75,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
 
   pas = ['Zu der Mutter und dem Blag', 'Zu den Nichtfrisuren'];
   let sitz = readlineSync.keyInSelect(pas, 'Wohin willst du dich setzen?');
+  //Popelkind
   if (sitz === 0) {
       console.log('\nSidar setzt sich zu der Mutter und ihrem Kind, die Mutter sichtlich mit einem lautstarkem Telefonat beschäftigt, das Kind jedoch schaut ihn an und streckt ihm die Zunge raus: “Du siehst scheiße aus! Du riecht nach Pups!”.');
       console.log("Der junge steckt seinen kleinen Finger tief in die Nase und lässt einen saftig schleimigen Popel zum Vorschein kommen.");
@@ -86,8 +87,6 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
                 let noShare = dices();
                 console.log(`Sidar hat leider nichts zum tauschen und das Balg trifft ihn mit einem Popel der Stärke ${noShare}.`);
                 sidar.excitement += noShare;
-                console.log(noShare);
-                console.log(sidar.excitement);
             }
             else
            { let kidPresent = readlineSync.keyInSelect(sidar.presents, "was soll Sidar dem Kind anbieten");
@@ -108,7 +107,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
                     console.log("Zum Glück benötigt Sidar sein Tachentuch nicht, da Die Mutter das ganze noch rechtzeitig mitbekommt und die Hand des Jungen festhält.")
                     console.log("Nach einer gehörigen Standpauke entschuldigt sich die Mutter und schenkt ihm einen Tampon.");
                     sidar.presents.push("Tampon")
-                    console.log(sidar.presents);
+                    
                 }
                 else if(sidar.dice < popel.dice) {
                     console.log("Dein Taschentuch wird von dem kleinem Finger durchbohrt und Die Attacke des Jungen ist ein voller Erfolg, Sidar ist fast am kotzen und das saftige Grün hängt in seinem Gesicht.");
@@ -137,10 +136,69 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
         else{
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
             console.log(" G A M E   O V E R ");
-        }
-      
-    
+        }  
   } 
+  //Glatzen
+  else if(sitz === 1){
+    console.log("Sidar setzt sich zu den Nichtfrisuren.");
+    console.log("\nEiner öffnet genüsslich ein neues Bier, wärend alle für ein neues Fußballlied anstimmen.");
+    console.log("Ganz tief im inneren hofft Sidar einfach nur nicht angesprochen zu werden, doch sein Gegenüber reißt von jetzt auf gleich die Augen weit auf und lehnt sich immer weiter Richtung Sidar.");
+    let hool = ['ja', 'nein'];
+        let help = readlineSync.keyInSelect(hool, 'Soll Sidar ihm etwas anbieten um ihm zu helfen?');
+        if(help === 0){
+    if(sidar.presents.length < 1){
+        let noHelp = dices();
+        console.log(`Sidar hat leider nichts zum helfen und der Hool trifft ihn mit einer Kotzattacke der Stärke ${noHelp}.`);
+        sidar.excitement += noHelp;
+    }
+    else
+   { let hoolHelp = readlineSync.keyInSelect(sidar.presents, "was soll Sidar dem Kind anbieten");
+    console.log(`Der Hool steckt sich ${sidar.presents[hoolHelp]} schnell in den Mund und kaut darauf rum. Die Kotzattacke wurde verhindert.`);
+    sidar.presents.splice(hoolHelp,1);}}
+
+    else if(help === 1){
+
+        console.log("ZEIT FÜR EIN DU-DU-DUELL");
+        let hoolDice = ['ja', 'nein'];
+        let secondDice = readlineSync.keyInSelect(hoolDice, 'Willst du würfeln?');
+        if(secondDice === 0) {
+            let womit = new Passenger("Glatzkopp", 38);
+            womit.dice = womit.excitement();
+            console.log(`Der ${womit.type} macht schon dicke Backen und es könnte eine Fontäne feinster Bierkotze mit Fruchtfleisch der Stärke ${womit.dice} über Sidar ergehen.`);
+            sidar.dice = dices();
+            console.log(`Sidar beugt sich hecktisch nach Rechts und Links, seine Ausweichtaktik hat eine Stärke von ${sidar.dice}`);
+            if(sidar.dice > womit.dice) {
+                console.log("Glück gehabt, der Hool presst mit vollem Einsatz einen Ohrenbetäubenden Rülpser raus. Mit einem: “Lmentschullije” drückt der Hool Sidar ein Bier in die Hand.")
+                sidar.presents.push("Bier")
+                
+            }
+            else if(sidar.dice < womit.dice) {
+                console.log("Sidars wackeln bringt nichts und der Hool kotzt mit einer formgleichen Fontäne komplett auf Sidars Schoß. Nun ist Sidar eins mit dem stinkenden Zug.");
+                console.log(`Sidar regt sich für ${womit.dice - sidar.dice} auf.`);
+                sidar.excitement += womit.dice - sidar.dice;
+                sidar.dice = 0;
+            }
+            else{
+                console.log("Sidar ist so genervt und verlässt weinend den Zug");
+                console.log(" G A M E   O V E R ");
+            }
+
+        }
+        else if(secondDice === 1){
+            let noDuellDice = dices();
+            console.log(`Der Hool kotzt mit einer formgleichen Fontäne komplett auf Sidars Schoß. Nun ist Sidar eins mit dem stinkenden Zug.\nSidar regt sich für ${noDuellDice} auf.`);
+            sidar.excitement += noDuellDice;
+        
+        }
+        else{
+            console.log("Sidar ist so genervt und verlässt weinend den Zug");
+            console.log(" G A M E   O V E R ");
+        }
+
+    }
+
+    }
   else{
-    //glatzen
-  }
+            console.log("Sidar ist so genervt und verlässt weinend den Zug");
+            console.log(" G A M E   O V E R ");
+        }
