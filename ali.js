@@ -204,6 +204,10 @@ console.log(
 
 pos = ["Bei Miss Plastic sitzen bleiben", "Zu den Schülern setzen."];
 
+
+
+
+
 sitzZweiteHaltestelle = readlineSync.keyInSelect(pos, "Was willst du tun?");
 
 //Plastik püpchen
@@ -382,3 +386,6 @@ else if (sitzZweiteHaltestelle === 1) {
     console.log("Sidar ist so genervt und verlässt weinend den Zug");
     console.log(" G A M E   O V E R ");
 }
+
+
+// hallo tom
