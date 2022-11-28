@@ -308,7 +308,7 @@ if (sitzZweiteHaltestelle === 0) {
       console.log(
         `Sidar sieht es und versucht dem hektisch auszuweichen mit der Stärke von ${sidar.dice}.`
       );
-      if (sidar.dice > missPlastic.dice) {
+      if (sidar.dice >= missPlastic.dice) {
         console.log(
           "Miss Plastic flutscht das Handy aus den Händen – Totalschaden. “Oh verdammte Scheiße, aber danke fürs mitspielen.” "
         );
@@ -407,7 +407,7 @@ else if (sitzZweiteHaltestelle === 1) {
       console.log(
         `Sidar entwickelt eine Aggressivität der Stärke ${sidar.dice} und möchte ihnen eine Ansage machen.`
       );
-      if (sidar.dice > schüler.dice) {
+      if (sidar.dice >= schüler.dice) {
         console.log(
           "Sidar platzt vor Aggressivität und bäumt sich vor den Kindern auf. “Hört mal zu ihr kleinen Scheißer, ein bisschen mehr Respekt oder ich sorg dafür das ihr kleinen Viren die längste Zeit Videospiele gezockt habt.”"
         );
