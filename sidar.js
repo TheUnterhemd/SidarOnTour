@@ -1,5 +1,4 @@
 const readlineSync = require('readline-sync');
-const readline = require('readline');
 
 // Personen
 
@@ -32,7 +31,7 @@ class Passenger {
 const dices = () => Math.floor((Math.random() * 20) + 1);
 
 // Clear
-const blank = `\n`.repeat(process.stdout.rows)
+
 
 
 
@@ -59,9 +58,6 @@ console.log(`"Wehmtzhmrrrr….”.\n`);
 
 pos = ['dem Dude einen 5 Euro Schein in die Hand drücken', 'sich von dem Dude lösen und so schnell es geht zum Gleis gehen'];
 let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tun?');
-console.log(blank);
-readline.cursorTo(process,0,0)
-readline.clearScreenDown(process.stdout)
   if (answer === 0) {
       sidar.presents.push("Beutel schwarzer Tee")
       console.log('\nSidar kramt einen 5 Euro Schein aus seiner Jackentasche und drückt diesen dem vermeintlichen Penner in die Hand. Etwas überrascht schaut sich der Dude den Schein an, steckt ihn weg und fummelt etwas aus seinen Lumpen.');
