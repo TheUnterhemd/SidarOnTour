@@ -250,6 +250,7 @@ else if (sitz === 1) {
 }
 
 //2 Haltestelle
+
 console.log(
   "\nEin neuer Schwall Menschen betritt den überfüllten Zug und reichert diesen mit Schweißgeruch an.\n"
 );

@@ -67,7 +67,7 @@ if (answer === 0) {
 }
 
 console.log("\nEndlich im Zug und es scheint Sidars Glückstag zu sein, denn der Zug hatte nur 2 Stunden verspätung.");
-console.log("Der typisch feine Zuggeruch – eine Mischung aus Parfüm, Bier und Scheiße erfreut direkt Sidars Nase, sein Blick schweift über die Sitplätze:");
+console.log("Der typisch feine Zuggeruch - eine Mischung aus Parfüm, Bier und Scheiße erfreut direkt Sidars Nase, sein Blick schweift über die Sitplätze:");
 
 console.log("\nZu seiner linken ein Vierersitz, eine Mutter spielt an ihrem Handy wärend das Kind sein Gesicht die Scheibe ablutscht.");
 console.log("Zu seiner rechten drei besoffene Fußballfans mit Glatze die lautstark Fußballieder gröhlen.\n");
@@ -229,7 +229,7 @@ if (sitzZweiteHaltestelle === 0) {
             );
             sidar.excitement += noplasticShare;
         } else {
-            let missPlasticPresent = readlineSync.keyInSelect(
+            let wechselnPlatze = readlineSync.keyInSelect(
                 sidar.presents,
                 "Was soll Sidar der Miss Plastic anbieten?"
             );
@@ -240,7 +240,7 @@ if (sitzZweiteHaltestelle === 0) {
         }
     } else if (plasticShare === 1) {
         console.log("ZEIT FÜR EIN DU-DU-DUELL");
-        let plasticDice = ["ja", "nein"];
+        let wechselDice = ["ja", "nein"];
         let thirdDice = readlineSync.keyInSelect(plasticDice, "Willst du würfeln?");
         if (thirdDice === 0) {
             let missPlastic = new Passenger("Miss Plastic", 35);
@@ -288,7 +288,8 @@ if (sitzZweiteHaltestelle === 0) {
 }
 
 //Schüler
-else if (sitzZweiteHaltestelle === 1) {
+
+    else if (sitzZweiteHaltestelle === 1) {
     console.log(
         "Sidar setzt sich zu den Schülern,\n beide scheinen heftig darüber zu streiten welches Pokémonspiel das beste ist."
     );
@@ -388,4 +389,200 @@ else if (sitzZweiteHaltestelle === 1) {
 }
 
 
-// hallo tom
+
+//Der nächste rege Wechsel an der Haltestelle.
+
+console.log(
+    "\nDer nächste rege Wechsel an der Haltestelle..\n"
+);
+
+console.log(
+    "\nEin Typ in einem langen dunklen Trenchcoat setzt sich neben Sidar.\n"
+);
+
+console.log(
+    "Seine Haare glänzend vor Fett, sein Gesicht ziert ein Schnurbart, als sei er frisch einem 80er Jahre Porno entflohen. \n"
+);
+
+console.log(
+    "Auf den anderen Platz wird eine Frau mit brünetter Dauerwelle von ihren drei unerzogenen kleffenden Hunden gezerrt..\n"
+);
+
+pis = ["Beim Pornobalken sitzen bleiben.", "Zur Hundelady wechseln."];
+
+haltstelleWechseln = readlineSync.keyInSelect(pis, "Was willst du tun?");
+
+//Plastik püpchen
+if (haltstelleWechseln === 0) {
+    console.log(
+        "\nDer creepy Typ mustert Sidar mit einem lächeln auf den Lippen von unten nach oben.: "
+    );
+    console.log(
+        "“Sidar räuspert sich und versucht den durchdringenden Blicken des Fremden zu entgehen,doch Mr.Pornobalken leckt sich über seine Lippen, was man nicht ignorieren kann. Ekel macht sich in Sidar breit, als sich die Hände des Fremden langsam zu dem Gürtel seines Mantels bewegen.Panik macht sich in Sidar breit."
+    );
+    console.log("Nackter Mann Attacke: ");
+    let ItemBenutzen = ["ja", "nein"];
+    let plasticShare = readlineSync.keyInSelect(ItemBenutzen, "Item benutzen?");
+    if (plasticShare === 0) {
+        if (sidar.presents.length < 1) {
+            let noplasticShare = dices();
+            console.log(
+                `Rasch schnürt er seinen Mantelürtel wieder fester, fummelt hektisch sein Smartphone heraus und begibt sich schnell zur Zugtoilette,  ${noplasticShare}auf welcher man die nächsten 30 Minuten nur noch seltsame Geräusche vernehmen kann.`
+            );
+            sidar.excitement += noplasticShare;
+        } else {
+            let wechselnPlatze = readlineSync.keyInSelect(
+                sidar.presents,
+                "Was soll Sidar Wechweln oder bleiben ?"
+            );
+            console.log(
+                `sider weis es nicht ${sidar.presents[wechselnPlatze]} wechseln oder bleiben.`
+            );
+            sidar.presents.splice(wechselnPlatze, 1);
+        }
+    } else if (plasticShare === 1) {
+        console.log("ZEIT FÜR EIN DU-DU-DUELL");
+        let wechselDice = ["ja", "nein"];
+        let fourthDice = readlineSync.keyInSelect(wechselDice, "Willst du würfeln?");
+        if (fourthDice === 0) {
+            let regeWechseln = new Passenger("wechseln oder bleiben", 35);
+            regeWechseln.dice = regeWechseln.excitement();
+            console.log(
+                `Die ${regeWechseln.type} spitzt schon ihre Lippen mit der Stärke ${regeWechseln.dice}!`
+            );
+            sidar.dice = dices();
+            console.log(
+                `: Der Perverse lässt Sidar keine Chance, mit einem schnellen Ruck spreizt er seinen Mantel rechts und links von sich und enthüllt sein ganzes Ich. ${sidar.dice}.`
+            );
+            if (sidar.dice >= regeWechseln.dice) {
+                console.log(
+                    "Sidars Augen sind weit aufgerissen, er ist geschockt, verweilt Blind in der Embryonalhaltung hin und her wippend mit dem Wissen, was das letzte einebrannte Bild in seinen Kopf sein wird was er jemals wieder sehen wird.” "
+                );
+                console.log(
+                    "Sidars Augen sind weit aufgerissen, er ist geschockt, verweilt Blind in der Embryonalhaltung hin und her wippend mit dem Wissen, was das letzte einebrannte Bild in seinen Kopf sein wird was er jemals wieder sehen wird."
+                );
+                sidar.presents.push("Item Onlyfans Abo");
+            } else if (sidar.dice < regeWechseln.dice) {
+                console.log(
+                    "Sidars hektisches ausweichen hat nichts gebracht,!"
+                );
+                console.log(`Du regst dich für ${regeWechseln.dice - sidar.dice} auf.`);
+                sidar.excitement += regeWechseln.dice - sidar.dice;
+                sidar.dice = 0;
+            } else {
+                console.log("Sidar ist so genervt und verlässt weinend den Zug");
+                console.log(" G A M E   O V E R ");
+            }
+        } else if (thirdDice === 1) {
+            let kissDice = dices();
+            console.log(
+                `Miss Plastic schleckt Sidar mitten durchs Gesicht und du ekelst dich für ${kissDice}.`
+            );
+            sidar.excitement += kissDice;
+        } else {
+            console.log("Sidar ist so genervt und verlässt weinend den Zug");
+            console.log(" G A M E   O V E R ");
+        }
+    } else {
+        console.log("Sidar ist so genervt und verlässt weinend den Zug");
+        console.log(" G A M E   O V E R ");
+    }
+}
+
+//Schüler
+else if (haltstelleWechseln === 1) {
+    console.log(
+        "Sidar erblickt im Augenwinkel einen Schaffner und brüllt diesen voller inbrunst zu sich."
+    );
+    console.log("\n “Zeigen Sie mir doch bitte mal Ihre Fahrkarte” richtet der Schaffner an den Typen.");
+
+    let anfang = [
+       "Dieser, wohl nicht nur unter dem Mantel nackt" , "kann damit nicht dienen und wird vom Schaffner wegbegleitet."
+    ];
+    let antwortenZuWeg = readlineSync.keyInSelect(
+        anfang,
+        "Was willst du sagen?\n"
+    );
+    if (antwortenZuWeg === 0) {
+        console.log(
+            "Sidar setzt sich neben die Hundelady."
+        );
+    } else if (antwortenZuWeg === 1) {
+        console.log(
+            "Die Hunde kleffen an einem Band und hören einfach nicht auf, dabei hat Sidar gerade eine Sprachnachricht von seiner Freundin erhalten, kann aber kein einziges Wort verstehen.”"
+        );
+    } else {
+        console.log(
+            "Er fragt die Frau ob Sie nicht irgendwas unternehmen kann, aber die Frau wertet das direkt als Angriff. “Die Hunde sind wunderbar erzogen, wahrscheinlich sind Sie das Problem, Sie arbeiten doch bestimmt in einer Dönerbude, da ist das doch kein Wunder wenn die Armen Hunde durchdrehen bei dem Geruch”.”\n"
+        );
+    }
+    console.log("Item Benutzen um die Hunde zu beruhigen?");
+    let hundeLady = ["ja", "nein"];
+    let altHelp = readlineSync.keyInSelect(hundeLady, "Items keine Wirkung.");
+    if (altHelp === 0) {
+        if (sidar.presents.length < 1) {
+            let altNoHelp = dices();
+            console.log(`Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, `);
+            console.log(
+                "gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen."
+            );
+            sidar.excitement += altNoHelp;
+        } else {
+            let teenHelp = readlineSync.keyInSelect(
+                sidar.presents,
+                "Was soll Sidar den Schülern anbieten?"
+            );
+            console.log(
+                `Der Duft von Sidar wird seiner Freundin bestimmt gefallen.${sidar.presents[teenHelp]} beeindruckt und gucken sich das in Ruhe fasziniert an.`
+            );
+            sidar.presents.splice(teenHelp, 1);
+        }
+    } else if (altHelp === 1) {
+        console.log("nicht zu lachen' sag mal sider; weiter (ja) oder bleiben (nein) ");
+        let hundDice = ["ja", "nein"];
+        let diceFour = readlineSync.keyInSelect(hundDice, "Willst du würfeln?");
+        if (diceFour === 0) {
+            let hundeGaGa = new Passenger("hunde", 8);
+            hundeGaGa.dice = hundeGaGa.excitement();
+            console.log(
+                `Die ${hundeGaGa.type} Der Duft von Sidar wird seiner Freundin bestimmt gefallen. ${hundeGaGa.dice} und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert.`
+            );
+
+            sidar.dice = dices();
+            console.log(
+                `Sidar entwickelt eine Aggressivität der Stärke ${sidar.dice} und möchte ihnen eine Ansage machen.`
+            );
+            if (sidar.dice >= hundeGaGa.dice) {
+                console.log(
+                    "Sidar platzt vor Aggressivität und bäumt sich vor den Kindern auf. “Hört mal zu ihr kleinen Scheißer, ein bisschen mehr Respekt oder ich sorg dafür das ihr kleinen Viren die längste Zeit Videospiele gezockt habt.”"
+                );
+                console.log(
+                    " Er steht breit grinsend auf, lächelt dem Herren im Trenchcoat zu und macht eine Kopfbewegung um zu signalisieren, das er den Platz gerne haben darf.. "
+                );
+                sidar.presents.push("Switch");
+            } else if (sidar.dice < hundeGaGa.dice) {
+                console.log(
+                    "Diese Einladung lässt sich der Creepy Kerl nicht entgehen."
+                );
+                console.log(`Er positioniert sich glücklich vor der Hundelady und reißt seinen Mantel auf. ${hundeGaGa.dice - sidar.dice} auf.`);
+                sidar.excitement += hundeGaGa.dice - sidar.dice;
+                sidar.dice = 0;
+            } else {
+                console.log("Sidar ist so genervt und verlässt weinend den Zug");
+                console.log(" G A M E   O V E R ");
+            }
+        } else if (diceFour === 1) {
+            let noDuellDice = dices();
+            console.log(
+                `Sidar begutachtet die Show etwas abseits vom Gang aus, die Frau sichtlich geschockt ist verstummt, .${noDuellDice}genauso wie die Tölen.`
+            );
+            sidar.excitement += noDuellDice;
+        } else {
+            console.log("Sidar ist so genervt und verlässt weinend den Zug");
+            console.log(" G A M E   O V E R ");
+        }
+    }
+} else {
+    console.log("Sidar ist so genervt und verlässt weinend den Zug");
+    console.log(" G A M E   O V E R ");
+}
