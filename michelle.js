@@ -125,7 +125,10 @@ if (sitz === 0) {
       sidar.presents.splice(kidPresent, 1);
     }
   } else if (share === 1) {
-    console.log("ZEIT FÜR EIN DU-DU-DUELL");
+    console.log(
+      "ZEIT FÜR EIN DU-DU-DUELL |\n Sidar hat eine Wutt Level von: " +
+        sidar.excitement
+    );
     let dice = ["ja", "nein"];
     let firstDice = readlineSync.keyInSelect(dice, "Willst du würfeln?");
     if (firstDice === 0) {
@@ -196,7 +199,7 @@ else if (sitz === 1) {
     } else {
       let hoolHelp = readlineSync.keyInSelect(
         sidar.presents,
-        "was soll Sidar den Nichtfrisuren anbieten" //GLATZEN ??
+        "was soll Sidar den Nichtfrisuren anbieten"
       );
       console.log(
         `Der Hool steckt sich ${sidar.presents[hoolHelp]} schnell in den Mund und kaut darauf rum. Die Kotzattacke wurde verhindert.`
@@ -204,7 +207,10 @@ else if (sitz === 1) {
       sidar.presents.splice(hoolHelp, 1);
     }
   } else if (help === 1) {
-    console.log("ZEIT FÜR EIN DU-DU-DUELL");
+    console.log(
+      "ZEIT FÜR EIN DU-DU-DUELL |\n Sidar hat eine Wutt Level von: " +
+        sidar.excitement
+    );
     let hoolDice = ["ja", "nein"];
     let secondDice = readlineSync.keyInSelect(hoolDice, "Willst du würfeln?");
     if (secondDice === 0) {
