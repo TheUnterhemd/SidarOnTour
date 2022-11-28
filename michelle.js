@@ -302,7 +302,7 @@ if (sitzZweiteHaltestelle === 0) {
     }
   } else if (plasticShare === 1) {
     console.log(
-      "ZEIT FÜR EIN DU-DU-DUELL | Sidar hat eine Wutt Level von: " +
+      "ZEIT FÜR EIN DU-DU-DUELL\nSidar hat eine Wutt Level von: " +
         sidar.excitement
     ); // excitement hinzugefügt
     let plasticDice = ["ja", "nein"];
