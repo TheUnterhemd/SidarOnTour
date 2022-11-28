@@ -295,7 +295,10 @@ if (sitzZweiteHaltestelle === 0) {
       sidar.presents.splice(missPlasticPresent, 1);
     }
   } else if (plasticShare === 1) {
-    console.log("ZEIT FÜR EIN DU-DU-DUELL");
+    console.log(
+      "ZEIT FÜR EIN DU-DU-DUELL | Sidar hat eine Wutt Level von: " +
+        sidar.excitement
+    ); // excitement hinzugefügt
     let plasticDice = ["ja", "nein"];
     let thirdDice = readlineSync.keyInSelect(plasticDice, "Willst du würfeln?");
     if (thirdDice === 0) {
@@ -393,7 +396,10 @@ else if (sitzZweiteHaltestelle === 1) {
       sidar.presents.splice(teenHelp, 1);
     }
   } else if (altHelp === 1) {
-    console.log("ZEIT FÜR EIN DU-DU-DUELL");
+    console.log(
+      "ZEIT FÜR EIN DU-DU-DUELL | Sidar hat eine Wutt Level von: " +
+        sidar.excitement
+    ); // excitement hinzugefügt
     let teenDice = ["ja", "nein"];
     let diceFour = readlineSync.keyInSelect(teenDice, "Willst du würfeln?");
     if (diceFour === 0) {
