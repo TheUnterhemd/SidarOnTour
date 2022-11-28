@@ -152,7 +152,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
         sidar.excitement += noHelp;
     }
     else
-   { let hoolHelp = readlineSync.keyInSelect(sidar.presents, "was soll Sidar dem Kind anbieten");
+   { let hoolHelp = readlineSync.keyInSelect(sidar.presents, "was soll Sidar der Fleischkappe anbieten");
     console.log(`Der Hool steckt sich ${sidar.presents[hoolHelp]} schnell in den Mund und kaut darauf rum. Die Kotzattacke wurde verhindert.`);
     sidar.presents.splice(hoolHelp,1);}}
 
@@ -194,9 +194,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
             console.log(" G A M E   O V E R ");
         }
-
     }
-
     }
   else{
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
