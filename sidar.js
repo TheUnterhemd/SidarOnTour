@@ -339,7 +339,7 @@ console.log(
         let altNoHelp = dices();
         console.log(`Sidar hat leider nichts was ihm hilft.`);
         console.log(
-          "Die Kinder machen sich immer weiter über Sidar lustig und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert. Mit der Stärke von ${altNoHelp}."
+          `Die Kinder machen sich immer weiter über Sidar lustig und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert. Mit der Stärke von ${altNoHelp}.`
         );
         sidar.excitement += altNoHelp;
       } else {
@@ -541,46 +541,48 @@ console.log(
             }
           } else if (dogTreat === 1) {
             console.log("ZEIT FÜR EIN DU-DU-DUELL");
-            let teenDice = ["ja", "nein"];
-            let diceFour = readlineSync.keyInSelect(teenDice, "Willst du würfeln?");
+            let ladyDice = ["ja", "nein"];
+            let dicefive = readlineSync.keyInSelect(ladyDice, "Willst du würfeln?");
             console.clear();
-            if (diceFour === 0) {
-              let schüler = new Passenger("Schüler", 12);
-              schüler.dice = schüler.excitement();
+            if (dicefive === 0) {
+              let dogLady = new Passenger("Hunde Mommy", 25);
+              dogLady.dice = dogLady.excitement();
               console.log(
-                `Die ${schüler.type} machen sich immer weiter über Sidar lustig mit der Stärke von ${schüler.dice} und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert.`
+                `Die ${dogLady.type} verdreht Ihre Augen und tatschält die Fußhupe. "Schauen Sie mal, der tut doch nichts." Sie zeigt mit Ihrem Finger auf Sidar und will Ihre Töhle für ${dogLady.dice} Punkte zu Sidar schicken.`
               );
         
               sidar.dice = dices();
               console.log(
-                `Sidar entwickelt eine Aggressivität der Stärke ${sidar.dice} und möchte ihnen eine Ansage machen.`
+                `Sidar macht sich bereit und bringt Spannung für ${sidar.dice} in seine Wade um das kleine Drecksvieh durch den ganzen Zug zu treten.`
               );
-              if (sidar.dice >= schüler.dice) {
+              if (sidar.dice >= dogLady.dice) {
                 console.log(
-                  "Sidar platzt vor Aggressivität und bäumt sich vor den Kindern auf. “Hört mal zu ihr kleinen Scheißer, ein bisschen mehr Respekt oder ich sorg dafür das ihr kleinen Viren die längste Zeit Videospiele gezockt habt.”"
+                  `Sidar sieht zur Seite und bei Anblick des Mannes mit dem Mantel kommt ihm eine Idee.
+                   Er steht breit grinsend auf, lächelt dem Herren im Trenchcoat zu und macht eine Kopfbewegung um zu signalisieren,
+                   das er den Platz gerne haben darf.
+                   Diese Einladung lässt sich der Creepy Kerl nicht entgehen.
+                   Er positioniert sich glücklich vor der Hundelady und reißt seinen Mantel auf.
+                   Sidar begutachtet die Show etwas abseits vom Gang aus, die Frau sichtlich geschockt ist verstummt, genauso wie die Tölen.`
                 );
+              } else if (sidar.dice < dogLady.dice) {
                 console.log(
-                  "Die Kinder fangen an zu wimmern, überreichen Sidar die Switch und laufen heulend aus dem Zug. "
+                  `Sidar ist zu langsam. Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
+                  Der Duft von Sidar wird seiner Freundin bestimmt gefallen. Die Pinkelattacke trifft Sidars bein mit: ${dogLady.dice}`
                 );
-                sidar.presents.push("Switch");
-              } else if (sidar.dice < schüler.dice) {
-                console.log(
-                  "Sidars Aggresivität ist nicht genug, er schafft es nicht den Kindern eine Ansage zu machen."
-                );
-                console.log(`Sidar regt sich für ${schüler.dice - sidar.dice} auf.`);
-                sidar.excitement += schüler.dice - sidar.dice;
+                console.log(`Sidar regt sich für ${dogLady.dice - sidar.dice} auf.`);
+                sidar.excitement += dogLady.dice - sidar.dice;
                 sidar.dice = 0;
               } else {
                 console.log("Sidar ist so genervt und verlässt weinend den Zug");
                 console.log(" G A M E   O V E R ");
               }
-            } else if (diceFour === 1) {
-              let noDuellDice = dices();
+            } else if (dicefive === 1) {
+              let dogAttack = dices();
               console.log(
-                `Die Kinder machen sich immer weiter Lustig über ihn, Passagiere fangen es an zu Filmen.
-                Sidar ist total beschämt und regt sich für ${noDuellDice} darüber auf.`
+                `Sidar ist zu langsam. Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
+                Der Duft von Sidar wird seiner Freundin bestimmt gefallen. Die Pinkelattacke trifft Sidars bein mit: ${dogAttack}`
               );
-              sidar.excitement += noDuellDice;
+              sidar.excitement += dogAttack;
             } else {
               console.log("Sidar ist so genervt und verlässt weinend den Zug");
               console.log(" G A M E   O V E R ");
