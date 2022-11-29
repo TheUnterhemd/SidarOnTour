@@ -30,7 +30,8 @@ class Passenger {
 
 const dices = () => Math.floor((Math.random() * 20) + 1);
 
-// sleep
+// Clear
+
 
 
 
@@ -57,6 +58,7 @@ console.log(`"Wehmtzhmrrrr….”.\n`);
 
 pos = ['dem Dude einen 5 Euro Schein in die Hand drücken', 'sich von dem Dude lösen und so schnell es geht zum Gleis gehen'];
 let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tun?');
+console.clear();
   if (answer === 0) {
       sidar.presents.push("Beutel schwarzer Tee")
       console.log('\nSidar kramt einen 5 Euro Schein aus seiner Jackentasche und drückt diesen dem vermeintlichen Penner in die Hand. Etwas überrascht schaut sich der Dude den Schein an, steckt ihn weg und fummelt etwas aus seinen Lumpen.');
@@ -75,6 +77,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
 
   pas = ['Zu der Mutter und dem Blag', 'Zu den Nichtfrisuren'];
   let sitz = readlineSync.keyInSelect(pas, 'Wohin willst du dich setzen?');
+  console.clear();
   //Popelkind
   if (sitz === 0) {
       console.log('\nSidar setzt sich zu der Mutter und ihrem Kind, die Mutter sichtlich mit einem lautstarkem Telefonat beschäftigt, das Kind jedoch schaut ihn an und streckt ihm die Zunge raus: “Du siehst scheiße aus! Du riecht nach Pups!”.');
@@ -82,6 +85,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
       console.log("Süffisant streckt der Junge seinen Popel Sidar entgegen.");
         let kid = ['ja', 'nein'];
         let share = readlineSync.keyInSelect(kid, 'Soll Sidar den Tausch eingehen');
+        console.clear();
         if(share === 0) {
             if(sidar.presents.length < 1){
                 let noShare = dices();
@@ -97,6 +101,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
             console.log("ZEIT FÜR EIN DU-DU-DUELL");
             let dice = ['ja', 'nein'];
             let firstDice = readlineSync.keyInSelect(dice, 'Willst du würfeln?');
+            console.clear();
             if(firstDice === 0) {
                 let popel = new Passenger("Popelkind", 4);
                 popel.dice = popel.excitement();
@@ -145,6 +150,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
     console.log("Ganz tief im inneren hofft Sidar einfach nur nicht angesprochen zu werden, doch sein Gegenüber reißt von jetzt auf gleich die Augen weit auf und lehnt sich immer weiter Richtung Sidar.");
     let hool = ['ja', 'nein'];
         let help = readlineSync.keyInSelect(hool, 'Soll Sidar ihm etwas anbieten um ihm zu helfen?');
+        console.clear();
         if(help === 0){
     if(sidar.presents.length < 1){
         let noHelp = dices();
@@ -161,6 +167,7 @@ let answer = readlineSync.keyInSelect(pos, 'Sidar räuspert sich, was soll er tu
         console.log("ZEIT FÜR EIN DU-DU-DUELL");
         let hoolDice = ['ja', 'nein'];
         let secondDice = readlineSync.keyInSelect(hoolDice, 'Willst du würfeln?');
+        console.clear();
         if(secondDice === 0) {
             let womit = new Passenger("Glatzkopp", 38);
             womit.dice = womit.excitement();
@@ -216,6 +223,7 @@ console.log(
   pos = ["Bei Miss Plastic sitzen bleiben", "Zu den Schülern setzen."];
   
   sitzZweiteHaltestelle = readlineSync.keyInSelect(pos, "Was willst du tun?");
+  console.clear();
   
   //Plastik püpchen
   if (sitzZweiteHaltestelle === 0) {
@@ -228,6 +236,7 @@ console.log(
     console.log("Kussattacke: ");
     let püpchen = ["ja", "nein"];
     let plasticShare = readlineSync.keyInSelect(püpchen, "Item benutzen?");
+    console.clear();
     if (plasticShare === 0) {
       if (sidar.presents.length < 1) {
         let noplasticShare = dices();
@@ -240,6 +249,7 @@ console.log(
           sidar.presents,
           "Was soll Sidar der Miss Plastic anbieten?"
         );
+        console.clear();
         console.log(
           `Die Miss Plastic bemerkt das sie ihre Tage bekommen hat und ist mit dem ${sidar.presents[missPlasticPresent]} auf die Toilette verschwunden.`
         );
@@ -249,6 +259,7 @@ console.log(
       console.log("ZEIT FÜR EIN DU-DU-DUELL");
       let plasticDice = ["ja", "nein"];
       let thirdDice = readlineSync.keyInSelect(plasticDice, "Willst du würfeln?");
+      console.clear();
       if (thirdDice === 0) {
         let missPlastic = new Passenger("Miss Plastic", 35);
         missPlastic.dice = missPlastic.excitement();
@@ -309,6 +320,7 @@ console.log(
       schülerAnfang,
       "Was willst du sagen?\n"
     );
+    console.clear();
     if (antwortenZuSchüler === 0) {
       console.log(
         "Beide Kinder gucken sich an und dann angeekelt zu Sidar: “Digga was bist denn du für’n Boomer?”"
@@ -325,6 +337,7 @@ console.log(
     console.log("Sie haben mich alt genannt Attacke: ");
     let schülerAntwort = ["ja", "nein"];
     let altHelp = readlineSync.keyInSelect(schülerAntwort, "Item benutzen?");
+    console.clear();
     if (altHelp === 0) {
       if (sidar.presents.length < 1) {
         let altNoHelp = dices();
@@ -347,6 +360,7 @@ console.log(
       console.log("ZEIT FÜR EIN DU-DU-DUELL");
       let teenDice = ["ja", "nein"];
       let diceFour = readlineSync.keyInSelect(teenDice, "Willst du würfeln?");
+      console.clear();
       if (diceFour === 0) {
         let schüler = new Passenger("Schüler", 12);
         schüler.dice = schüler.excitement();
