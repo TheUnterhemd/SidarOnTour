@@ -209,16 +209,12 @@ console.clear();
         }
         //2 Haltestelle
 console.log(
-    "\nEin neuer Schwall Menschen betritt den überfüllten Zug und reichert diesen mit Schweißgeruch an.\n"
-  );
+    "\nEin neuer Schwall Menschen betritt den überfüllten Zug und reichert diesen mit Schweißgeruch an.\n");
+  console.log(
+    "Deine Sitznachbarn sind ausgestiegen, auf dem Viererplatz neben dir setzen sich zwei Schüler und zocken auf einer Switch, \n");
   
   console.log(
-    "Deine Sitznachbarn sind ausgestiegen, auf dem Viererplatz neben dir setzen sich zwei Schüler und zocken auf einer Switch, \n"
-  );
-  
-  console.log(
-    "auf dem Platz direkt neben dir setzt sich eine, du schätzt junge Frau, wobei diese aus 98% Plastik besteht und Sie genauso gut 69 sein könnte.\n"
-  );
+    "auf dem Platz direkt neben dir setzt sich eine, du schätzt junge Frau, wobei diese aus 98% Plastik besteht und Sie genauso gut 69 sein könnte.\n");
   
   pos = ["Bei Miss Plastic sitzen bleiben", "Zu den Schülern setzen."];
   
@@ -277,7 +273,7 @@ console.log(
           console.log(
             "Die Unbekannte steckt dir einen Zettel mit einem Code für ein Monatsabo für ihren Onlyfans zu."
           );
-          sidar.presents.push("Monatsabo Miss Plastic Onlyfans");
+          sidar.presents.push("OnlyFans Abo");
         } else if (sidar.dice < missPlastic.dice) {
           console.log(
             "Sidars hektisches ausweichen hat nichts gebracht, Miss Plastics Attacke ist ein voller erfolg und sie schleckt sein ganzes gesicht ab, hoffentlich kriegt das seine Freundin nie mit!"
@@ -407,3 +403,209 @@ console.log(
     console.log("Sidar ist so genervt und verlässt weinend den Zug");
     console.log(" G A M E   O V E R ");
   }
+
+//Haltestelle 3
+
+        //2 Haltestelle
+        console.log(
+          "Der nächste rege Wechsel an der Haltestelle.");
+        console.log(
+          "Ein Typ in einem langen dunklen Trenchcoat setzt sich neben Sidar.\nSeine Haare glänzend vor Fett, sein Gesicht ziert ein Schnurbart, als sei er frisch einem 80er Jahre Porno entflohen.\n");
+        
+        console.log(
+          "Auf den anderen Platz wird eine Frau mit brünetter Dauerwelle von ihren drei unerzogenen kleffenden Hunden gezerrt.\n");
+        
+        pos3 = ["Beim Pornobalken sitzen bleiben.", "Zur Hundelady wechseln."];
+        
+        sitzZweiteHaltestelle = readlineSync.keyInSelect(pos3, "Was soll Sidar tun?");
+        console.clear();
+        
+        //Mr. Pornobalken
+        if (sitzZweiteHaltestelle === 0) {
+          console.log(
+            "Der creepy Typ mustert Sidar mit einem lächeln auf den Lippen von unten nach oben.\nSidar räuspert sich und versucht den durchdringenden Blicken des Fremden zu entgehen,\ndoch Mr. Pornobalken leckt sich über seine Lippen, was man nicht ignorieren kann.\n");
+          console.log(
+            "Ekel macht sich in Sidar breit, als sich die Hände des Fremden langsam zu dem Gürtel seines Mantels bewegen.");
+
+
+          console.log("Nackter Mann Attacke:");
+          let porno = ["ja", "nein"];
+          let pornoShare = readlineSync.keyInSelect(porno, "Item benutzen?");
+          console.clear();
+          if (pornoShare === 0) {
+            if (sidar.presents.length < 1) {
+              let noPornoShare = dices();
+              console.log(
+                `Sidar hat nichts in seinen Taschen.
+                
+                Der Perverse lässt Sidar keine Chance, mit einem schnellen Ruck spreizt er seinen Mantel und enthüllt sein ganzes Ich.
+                Sidars Augen sind weit aufgerissen, er ist geschockt, verweilt Blind in der Embryonalhaltung  mit dem Wissen, was das letzte eingebrannte Bild in seinen Kopf sein wird. Die Attecke des Pornobalkenträgers ekelt Sidar mit ${noPornoShare}.`);
+                sidar.excitement += noPornoShare;
+                console.log("Sidars Ekelstufe ist auf: " + sidar.excitement)
+            } else {
+              let pornoPresent = readlineSync.keyInSelect(
+                sidar.presents,
+                "Was soll Sidar dem Ekeltypen anbieten?"
+              );
+              console.clear();
+              if(sidar.presents[pornoPresent] === "OnlyFans Abo"){
+                console.log("Der creepy Typ macht Auge, leichtes sabbern glitzert aus seinem Mundwinkel. Rasch schnürt er seinen Mantelürtel wieder fester, fummelt hektisch sein Smartphone heraus und begibt sich schnell zur Zugtoilette, auf welcher man die nächsten 30 Minuten nur noch seltsame Geräusche vernehmen kann.");
+                sidar.presents.splice(pornoPresent, 1);
+              }
+              else{
+                let noPresent = dices();
+                console.log(`"Mr. Ich habe nichts drunter" ist wenig beeindruckt und schmeißt dein ${sidar.presents[pornoPresent]} weg. Er fackelt auch nicht lange und öffnet seinen Mantel damit sich Anblick in Sidars Hirn einbrennt. Die Attecke des Pornobalkenträgers ekelt Sidar mit ${noPresent}.`);
+                sidar.presents.splice(pornoPresent, 1);
+              }
+            }
+          } else if (pornoShare === 1) {
+            console.log("ZEIT FÜR EIN DU-DU-DUELL");
+            let pornoDice = ["ja", "nein"];
+            let fifthDice = readlineSync.keyInSelect(pornoDice, "Willst du würfeln?");
+            console.clear();
+            if (fifthDice === 0) {
+              let misterPorno = new Passenger("Mr. Pornobalken", 56);
+              misterPorno.dice = misterPorno.excitement();
+              console.log(
+                `${misterPorno.type} wird immer geiler und seine Erregung wächst um: ${misterPorno.dice}!`
+              );
+              sidar.dice = dices();
+              console.log(
+                `Sidar schaut sich im ganzen Zug nach hilfe um. Die Wahrscheinlichkeit das er jemanden findet ist: ${sidar.dice}.`
+              );
+              if (sidar.dice >= misterPorno.dice) {
+                console.log(`Sidar erblickt im Augenwinkel einen Schaffner und brüllt diesen voller inbrunst zu sich.
+                “Zeigen Sie mir doch bitte mal Ihre Fahrkarte” richtet der Schaffner an den Typen.
+                Dieser, wohl nicht nur unter dem Mantel nackt, kann damit nicht dienen und wird vom Schaffner wegbegleitet.`
+                );
+
+              } else if (sidar.dice < misterPorno.dice) {
+                console.log(
+                  `Es schein als wäre Sidar nun mit dem Peversen alleine im Abteil und die Atttacke von ${misterPorno.type} brennt sich in Sidars Kopf.`
+                );
+                console.log(`Du regst dich für ${misterPorno.dice - sidar.dice} auf.`);
+                sidar.excitement += misterPorno.dice - sidar.dice;
+                sidar.dice = 0;
+              } else {
+                console.log("Sidar ist so genervt und verlässt weinend den Zug");
+                console.log(" G A M E   O V E R ");
+              }
+            } else if (fifthdDice === 1) {
+              let pornoDice = dices();
+              console.log(
+                `Der Perverse lässt Sidar keine Chance, mit einem schnellen Ruck spreizt er seinen Mantel und enthüllt sein ganzes Ich.
+                Sidars Augen sind weit aufgerissen, er ist geschockt, verweilt Blind in der Embryonalhaltung  mit dem Wissen, was das letzte eingebrannte Bild in seinen Kopf sein wird. Die Attecke des Pornobalkenträgers ekelt Sidar mit ${pornoDice}.`
+              );
+              sidar.excitement += pornoDice;
+            } else {
+              console.log("Sidar ist so genervt und verlässt weinend den Zug");
+              console.log(" G A M E   O V E R ");
+            }
+          } else {
+            console.log("Sidar ist so genervt und verlässt weinend den Zug");
+            console.log(" G A M E   O V E R ");
+          }
+        }
+        
+        //Hundelady
+        else if (sitzZweiteHaltestelle === 1) {
+          console.log(
+            "Sidar setzt sich zu den Schülern,\n beide scheinen heftig darüber zu streiten welches Pokémonspiel das beste ist."
+          );
+          console.log("\n Die Blagen werden immer lauter und fangen an zu rangeln.");
+        
+          let schülerAnfang = [
+            "Verdammt das beste ist und bleibt ROT!",
+            "Verdammt Blau ist und bleibt das Beste!",
+          ];
+          let antwortenZuSchüler = readlineSync.keyInSelect(
+            schülerAnfang,
+            "Was willst du sagen?\n"
+          );
+          console.clear();
+          if (antwortenZuSchüler === 0) {
+            console.log(
+              "Beide Kinder gucken sich an und dann angeekelt zu Sidar: “Digga was bist denn du für’n Boomer?”"
+            );
+          } else if (antwortenZuSchüler === 1) {
+            console.log(
+              "Beide Kinder gucken sich an und dann angeekelt zu Sidar: “Diggah was bist denn du für’n Boomer?”"
+            );
+          } else {
+            console.log(
+              "Sidar sitzt schweigend da, jedoch gucken ihn beide Kinder an und sagen angeekelt: “Diggah was bist denn du für’n Boomer?”\n"
+            );
+          }
+          console.log("Sie haben mich alt genannt Attacke: ");
+          let schülerAntwort = ["ja", "nein"];
+          let altHelp = readlineSync.keyInSelect(schülerAntwort, "Item benutzen?");
+          console.clear();
+          if (altHelp === 0) {
+            if (sidar.presents.length < 1) {
+              let altNoHelp = dices();
+              console.log(`Sidar hat leider nichts was ihm hilft.`);
+              console.log(
+                "Die Kinder machen sich immer weiter über Sidar lustig und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert. Mit der Stärke von ${altNoHelp}."
+              );
+              sidar.excitement += altNoHelp;
+            } else {
+              let teenHelp = readlineSync.keyInSelect(
+                sidar.presents,
+                "Was soll Sidar den Schülern anbieten?"
+              );
+              console.log(
+                `Die Schüler sind vom ${sidar.presents[teenHelp]} beeindruckt und gucken sich das in Ruhe fasziniert an.`
+              );
+              sidar.presents.splice(teenHelp, 1);
+            }
+          } else if (altHelp === 1) {
+            console.log("ZEIT FÜR EIN DU-DU-DUELL");
+            let teenDice = ["ja", "nein"];
+            let diceFour = readlineSync.keyInSelect(teenDice, "Willst du würfeln?");
+            console.clear();
+            if (diceFour === 0) {
+              let schüler = new Passenger("Schüler", 12);
+              schüler.dice = schüler.excitement();
+              console.log(
+                `Die ${schüler.type} machen sich immer weiter über Sidar lustig mit der Stärke von ${schüler.dice} und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert.`
+              );
+        
+              sidar.dice = dices();
+              console.log(
+                `Sidar entwickelt eine Aggressivität der Stärke ${sidar.dice} und möchte ihnen eine Ansage machen.`
+              );
+              if (sidar.dice >= schüler.dice) {
+                console.log(
+                  "Sidar platzt vor Aggressivität und bäumt sich vor den Kindern auf. “Hört mal zu ihr kleinen Scheißer, ein bisschen mehr Respekt oder ich sorg dafür das ihr kleinen Viren die längste Zeit Videospiele gezockt habt.”"
+                );
+                console.log(
+                  "Die Kinder fangen an zu wimmern, überreichen Sidar die Switch und laufen heulend aus dem Zug. "
+                );
+                sidar.presents.push("Switch");
+              } else if (sidar.dice < schüler.dice) {
+                console.log(
+                  "Sidars Aggresivität ist nicht genug, er schafft es nicht den Kindern eine Ansage zu machen."
+                );
+                console.log(`Sidar regt sich für ${schüler.dice - sidar.dice} auf.`);
+                sidar.excitement += schüler.dice - sidar.dice;
+                sidar.dice = 0;
+              } else {
+                console.log("Sidar ist so genervt und verlässt weinend den Zug");
+                console.log(" G A M E   O V E R ");
+              }
+            } else if (diceFour === 1) {
+              let noDuellDice = dices();
+              console.log(
+                `Die Kinder machen sich immer weiter Lustig über ihn, Passagiere fangen es an zu Filmen.
+                Sidar ist total beschämt und regt sich für ${noDuellDice} darüber auf.`
+              );
+              sidar.excitement += noDuellDice;
+            } else {
+              console.log("Sidar ist so genervt und verlässt weinend den Zug");
+              console.log(" G A M E   O V E R ");
+            }
+          }
+        } else {
+          console.log("Sidar ist so genervt und verlässt weinend den Zug");
+          console.log(" G A M E   O V E R ");
+        }
