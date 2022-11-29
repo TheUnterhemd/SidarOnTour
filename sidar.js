@@ -415,7 +415,7 @@ console.log(
         
         pos3 = ["Beim Pornobalken sitzen bleiben.", "Zur Hundelady wechseln."];
         
-        sitzZweiteHaltestelle = readlineSync.keyInSelect(pos3, "Was soll Sidar tun?");
+        sitzDritteHaltestelle = readlineSync.keyInSelect(pos3, "Was soll Sidar tun?");
         console.clear();
         
         //Mr. Pornobalken
