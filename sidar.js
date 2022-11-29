@@ -405,8 +405,6 @@ console.log(
   }
 
 //Haltestelle 3
-
-        //2 Haltestelle
         console.log(
           "Der nächste rege Wechsel an der Haltestelle.");
         console.log(
@@ -421,7 +419,7 @@ console.log(
         console.clear();
         
         //Mr. Pornobalken
-        if (sitzZweiteHaltestelle === 0) {
+        if (sitzDritteHaltestelle === 0) {
           console.log(
             "Der creepy Typ mustert Sidar mit einem lächeln auf den Lippen von unten nach oben.\nSidar räuspert sich und versucht den durchdringenden Blicken des Fremden zu entgehen,\ndoch Mr. Pornobalken leckt sich über seine Lippen, was man nicht ignorieren kann.\n");
           console.log(
@@ -490,7 +488,7 @@ console.log(
                 console.log("Sidar ist so genervt und verlässt weinend den Zug");
                 console.log(" G A M E   O V E R ");
               }
-            } else if (fifthdDice === 1) {
+            } else if (fifthDice === 1) {
               let pornoDice = dices();
               console.log(
                 `Der Perverse lässt Sidar keine Chance, mit einem schnellen Ruck spreizt er seinen Mantel und enthüllt sein ganzes Ich.
@@ -508,57 +506,40 @@ console.log(
         }
         
         //Hundelady
-        else if (sitzZweiteHaltestelle === 1) {
-          console.log(
-            "Sidar setzt sich zu den Schülern,\n beide scheinen heftig darüber zu streiten welches Pokémonspiel das beste ist."
-          );
-          console.log("\n Die Blagen werden immer lauter und fangen an zu rangeln.");
+        else if (sitzDritteHaltestelle === 1) {
+          console.log(`Die Hunde sind nur am kleffen und hören einfach nicht auf, dabei hat Sidar gerade eine Sprachnachricht von seiner Freundin erhalten,kann aber kein einziges Wort verstehen.
+          Er fragt die Frau ob Sie nicht irgendwas unternehmen kann, aber die Frau wertet das direkt als Angriff. “Die Hunde sind wunderbar erzogen, wahrscheinlich sind Sie das Problem, Sie arbeiten doch bestimmt in einer Dönerbude, da ist das doch kein Wunder, wenn die Armen Hunde durchdrehen bei dem Geruch”.`); 
         
-          let schülerAnfang = [
-            "Verdammt das beste ist und bleibt ROT!",
-            "Verdammt Blau ist und bleibt das Beste!",
+          let dogs = [
+            "Ja",
+            "Nein",
           ];
-          let antwortenZuSchüler = readlineSync.keyInSelect(
-            schülerAnfang,
-            "Was willst du sagen?\n"
+          let dogTreat = readlineSync.keyInSelect(
+            dogs,
+            "Soll Sidar versuchen die Hunde zu bestechen?\n"
           );
           console.clear();
-          if (antwortenZuSchüler === 0) {
-            console.log(
-              "Beide Kinder gucken sich an und dann angeekelt zu Sidar: “Digga was bist denn du für’n Boomer?”"
-            );
-          } else if (antwortenZuSchüler === 1) {
-            console.log(
-              "Beide Kinder gucken sich an und dann angeekelt zu Sidar: “Diggah was bist denn du für’n Boomer?”"
-            );
-          } else {
-            console.log(
-              "Sidar sitzt schweigend da, jedoch gucken ihn beide Kinder an und sagen angeekelt: “Diggah was bist denn du für’n Boomer?”\n"
-            );
-          }
-          console.log("Sie haben mich alt genannt Attacke: ");
-          let schülerAntwort = ["ja", "nein"];
-          let altHelp = readlineSync.keyInSelect(schülerAntwort, "Item benutzen?");
-          console.clear();
-          if (altHelp === 0) {
+
+          if (dogTreat === 0) {
             if (sidar.presents.length < 1) {
-              let altNoHelp = dices();
-              console.log(`Sidar hat leider nichts was ihm hilft.`);
+              let dogDice = dices();
+              console.log(`Sidar hat leider nichts für die Hunde.`);
               console.log(
-                "Die Kinder machen sich immer weiter über Sidar lustig und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert. Mit der Stärke von ${altNoHelp}."
+                `Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
+                Der Duft von Sidar wird seiner Freundin bestimmt gefallen. Die Pinkelattacke trifft Sidars bein mit: ${dogDice}`
               );
-              sidar.excitement += altNoHelp;
+              sidar.excitement += dogDice;
             } else {
-              let teenHelp = readlineSync.keyInSelect(
+              let dogToy = readlineSync.keyInSelect(
                 sidar.presents,
-                "Was soll Sidar den Schülern anbieten?"
+                "Was soll Sidar den Hunden zum spielen anbieten?"
               );
               console.log(
-                `Die Schüler sind vom ${sidar.presents[teenHelp]} beeindruckt und gucken sich das in Ruhe fasziniert an.`
+                `Die verzogenen Köter stürzen sich auf ${sidar.presents[dogToy]} und beginnen damit zu spielen. Der Chihuahua gewinnt das ganze und verteidigt sein neues Spielzeug.`
               );
-              sidar.presents.splice(teenHelp, 1);
+              sidar.presents.splice(dogToy, 1);
             }
-          } else if (altHelp === 1) {
+          } else if (dogTreat === 1) {
             console.log("ZEIT FÜR EIN DU-DU-DUELL");
             let teenDice = ["ja", "nein"];
             let diceFour = readlineSync.keyInSelect(teenDice, "Willst du würfeln?");
