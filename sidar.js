@@ -844,6 +844,13 @@ if (sidar.presents.length < 1) {
   let presentOne = sidar.presents[present1];
   sidar.presents.splice(present1, 1);
   console.clear();
+  if (sidar.presents.length < 1) {
+    console.log(
+      "Sidar hat anscheinen nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER"
+    );
+    console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+  `);
+  } else{
   console.log(
     "Da Frauen Geschenke mögen, will sidar Ihr nicht nur eines geben."
   );
@@ -869,5 +876,5 @@ if (sidar.presents.length < 1) {
   Ich meine Seriously, wer kann es ihr verübeln? Verzieh dich wieder nach Leipzig!`);
     console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
 `);
-  }
+  }}
 }
