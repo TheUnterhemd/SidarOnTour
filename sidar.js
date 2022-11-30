@@ -858,7 +858,7 @@ if (sidar.presents.length < 1) {
     sidar.presents,
     "Was soll Sidar auswählen?"
   );
-  let presentTwo = sidar.presents[present1];
+  let presentTwo = sidar.presents[present2];
   sidar.presents.splice(present2, 1);
   console.clear();
 
