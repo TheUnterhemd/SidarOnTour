@@ -122,7 +122,8 @@ console.clear();
                 }
                 else{
                     console.log("Sidar ist so genervt und verlässt weinend den Zug");
-                    console.log(" G A M E   O V E R ");
+                   console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
                 }
 
             }
@@ -134,13 +135,15 @@ console.clear();
             }
             else{
                 console.log("Sidar ist so genervt und verlässt weinend den Zug");
-                console.log(" G A M E   O V E R ");
+                console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
             }
 
         }
         else{
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
-            console.log(" G A M E   O V E R ");
+           console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
         }  
   } 
   //Glatzen
@@ -187,7 +190,8 @@ console.clear();
             }
             else{
                 console.log("Sidar ist so genervt und verlässt weinend den Zug");
-                console.log(" G A M E   O V E R ");
+               console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
             }
 
         }
@@ -199,13 +203,15 @@ console.clear();
         }
         else{
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
-            console.log(" G A M E   O V E R ");
+            console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
         }
     }
     }
   else{
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
-            console.log(" G A M E   O V E R ");
+            console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
         }
         //2 Haltestelle
 console.log(
@@ -283,7 +289,8 @@ console.log(
           sidar.dice = 0;
         } else {
           console.log("Sidar ist so genervt und verlässt weinend den Zug");
-          console.log(" G A M E   O V E R ");
+         console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
         }
       } else if (thirdDice === 1) {
         let kissDice = dices();
@@ -293,11 +300,13 @@ console.log(
         sidar.excitement += kissDice;
       } else {
         console.log("Sidar ist so genervt und verlässt weinend den Zug");
-        console.log(" G A M E   O V E R ");
+        console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
       }
     } else {
       console.log("Sidar ist so genervt und verlässt weinend den Zug");
-      console.log(" G A M E   O V E R ");
+     console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
     }
   }
   
@@ -385,7 +394,8 @@ console.log(
           sidar.dice = 0;
         } else {
           console.log("Sidar ist so genervt und verlässt weinend den Zug");
-          console.log(" G A M E   O V E R ");
+         console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
         }
       } else if (diceFour === 1) {
         let noDuellDice = dices();
@@ -396,12 +406,14 @@ console.log(
         sidar.excitement += noDuellDice;
       } else {
         console.log("Sidar ist so genervt und verlässt weinend den Zug");
-        console.log(" G A M E   O V E R ");
+       console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
       }
     }
   } else {
     console.log("Sidar ist so genervt und verlässt weinend den Zug");
-    console.log(" G A M E   O V E R ");
+   console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
   }
 
 //Haltestelle 3
@@ -486,7 +498,8 @@ console.log(
                 sidar.dice = 0;
               } else {
                 console.log("Sidar ist so genervt und verlässt weinend den Zug");
-                console.log(" G A M E   O V E R ");
+                console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
               }
             } else if (fifthDice === 1) {
               let pornoDice = dices();
@@ -497,11 +510,13 @@ console.log(
               sidar.excitement += pornoDice;
             } else {
               console.log("Sidar ist so genervt und verlässt weinend den Zug");
-              console.log(" G A M E   O V E R ");
+             console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
             }
           } else {
             console.log("Sidar ist so genervt und verlässt weinend den Zug");
-            console.log(" G A M E   O V E R ");
+            console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
           }
         }
         
@@ -574,7 +589,8 @@ console.log(
                 sidar.dice = 0;
               } else {
                 console.log("Sidar ist so genervt und verlässt weinend den Zug");
-                console.log(" G A M E   O V E R ");
+               console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
               }
             } else if (dicefive === 1) {
               let dogAttack = dices();
@@ -585,12 +601,14 @@ console.log(
               sidar.excitement += dogAttack;
             } else {
               console.log("Sidar ist so genervt und verlässt weinend den Zug");
-              console.log(" G A M E   O V E R ");
+              console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
             }
           }
         } else {
           console.log("Sidar ist so genervt und verlässt weinend den Zug");
-          console.log(" G A M E   O V E R ");
+          console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
         }
         //Haltestelle 4
 console.log("\n Nicht mehr weit weg vom Ziel, der letzte Zwischenhalt.");
@@ -651,7 +669,8 @@ if(gehenOderBleiben === 0) {
   console.log("Sidar regt sich " + omiDice2) + " auf.";
 } else {
   console.log("Sidar ist so genervt und verlässt weinend den Zug");
-  console.log(" G A M E   O V E R ");
+  console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
 }
 
 //Endboss
@@ -682,7 +701,8 @@ console.log(`Sidars Freundin ist sichtlich verärgert und dies verunsichert Sida
 sidar.excitement += hotDice1;
 if(sidar.excitement >= 180){
   console.log("Sidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt");
-  console.log(" G A M E   O V E R");
+  console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
 }
 else{console.log(`
 Sidar ist sichtlich irritiert und sein Puls steigt auf ${sidar.excitement}`);}
@@ -697,7 +717,8 @@ else if( hot === 1){
   sidar.excitement += hotDice2;
   if(sidar.excitement >= 180){
     console.log("Sidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt");
-    console.log(" G A M E   O V E R");
+   console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
   }
   else{console.log(`
   Sidar ist sichtlich irritiert und sein Puls steigt auf ${sidar.excitement}`);}
@@ -705,7 +726,8 @@ else if( hot === 1){
 }
 else{
   console.log("Sidar ist so genervt und springt weinend in den Zug");
-  console.log(" G A M E   O V E R ");
+  console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
 }
 
 console.log(`Sidar seufzt vor Verzweiflung. “Natürlich nicht, sonst würd ich nicht den ganzen Weg zu dir fahren.”
@@ -730,7 +752,8 @@ else if(beautiful === 1){
 }
 else{
   console.log("Sidar ist so genervt und springt weinend in den Zug");
-  console.log(" G A M E   O V E R ");
+ console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
 }
 
 console.log("Die Situation schein Sidar aus den Händen zu gleiten und sein Puls rast. Doch Sidar gibt nicht auf und in ihm wächst die wohl beste Idee seines Lebens. Er kramt in seinen Taschen und sucht nach einem geschenk für seine Freundin.\n");
@@ -738,7 +761,8 @@ console.log("Welche geschenke soll Sidar seiner Freundin geben?");
 
 if(sidar.presents.length < 1){
     console.log("Sidar hat anscheinen nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER");
-    console.log("G A M E   O V E R");
+  console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
 }
 else
 {let present1 = readlineSync.keyInSelect(sidar.presents, "Was soll Sidar auswählen?");
@@ -760,5 +784,6 @@ else{
   console.log(`
   “Was gibst du mir da? Bist du ein Psycho oder so????” Sie nimmt die Beine in die Hand und verschwindet so schnell es geht aus dem Sichtfeld von Sidar.
   Ich meine Seriously, wer kann es ihr verübeln? Verzieh dich wieder nach Leipzig!`);
-  console.log("G A M E   O V E R");
+  console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+`);
 }}
