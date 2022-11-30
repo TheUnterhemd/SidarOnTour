@@ -765,6 +765,7 @@ if (hot === 0) {
   );
   sidar.excitement += hotDice1;
   if (sidar.excitement >= 180) {
+    console.clear()
     console.log(
       "Sidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt"
     );
