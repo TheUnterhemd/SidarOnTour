@@ -842,7 +842,7 @@ if (sidar.presents.length < 1) {
     "Was soll Sidar auswählen?"
   );
   let presentOne = sidar.presents[present1];
-  sidar.presents.slice(present1, 1);
+  sidar.presents.splice(present1, 1);
   console.clear();
   console.log(
     "Da Frauen Geschenke mögen, will sidar Ihr nicht nur eines geben."
@@ -852,13 +852,13 @@ if (sidar.presents.length < 1) {
     "Was soll Sidar auswählen?"
   );
   let presentTwo = sidar.presents[present1];
-  sidar.presents.slice(present2, 1);
+  sidar.presents.splice(present2, 1);
   console.clear();
 
   if (
-    presentOne === "Beutel schwarzer Tee" ||
-    (presentOne === "Thermoskanne" && presentTwo === "Beutel schwarzer Tee") ||
-    presentTwo === "Thermoskanne"
+    presentOne === "Beutel schwarzer Tee" &&
+    (presentOne === "Thermoskanne" || presentTwo === "Beutel schwarzer Tee" ||
+    presentTwo === "Thermoskanne")
   ) {
     console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endBoss.nick}!“, eine Thermoskanne voller schwarzem Tee.
   ${endBoss.name} Augen beginnen zu funkeln als Sidar ihr ihren Lieblingstee überreicht. Sie umklammert seinen Arm und schenkt ihm einen verliebten Blick. “Aww du kennst mich ja wirklich! Komm! Wir gehen nach Hause, du legst die Füße hoch und ich koche uns etwas leckeres!”
