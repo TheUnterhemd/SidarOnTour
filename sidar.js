@@ -864,7 +864,7 @@ if (sidar.presents.length < 1) {
 
   if (
     presentOne === "Beutel schwarzer Tee" &&
-    presentTwo === "Thermoskanne" || presentTwo === "Beutel schwarzer Tee" ||
+    presentTwo === "Thermoskanne" || presentTwo === "Beutel schwarzer Tee" &&
     presentone === "Thermoskanne"
   ) {
     console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endBoss.nick}!“, eine Thermoskanne voller schwarzem Tee.
