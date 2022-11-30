@@ -112,7 +112,7 @@ if (sitz === 0) {
   console.clear();
   if (share === 0) {
     if (sidar.presents.length < 1) {
-      let noShare = dices();
+      let noShare = dices() *2;
       console.log(
         `Sidar hat leider nichts zum tauschen und das Balg trifft ihn mit einem Popel der Stärke ${noShare}.`
       );
@@ -163,7 +163,7 @@ if (sitz === 0) {
 `);
       }
     } else if (firstDice === 1) {
-      let dice = dices();
+      let dice = dices()*2;
       console.log(
         `Das Kind schmiert Sidar den Poppel mitten ins Gesicht und du ekelst dich für ${dice}.`
       );
@@ -196,7 +196,7 @@ else if (sitz === 1) {
   console.clear();
   if (help === 0) {
     if (sidar.presents.length < 1) {
-      let noHelp = dices();
+      let noHelp = dices()*2;
       console.log(
         `Sidar hat leider nichts zum helfen und der Hool trifft ihn mit einer Kotzattacke der Stärke ${noHelp}.`
       );
@@ -244,7 +244,7 @@ else if (sitz === 1) {
 `);
       }
     } else if (secondDice === 1) {
-      let noDuellDice = dices();
+      let noDuellDice = dices()*2;
       console.log(
         `Der Hool kotzt mit einer formgleichen Fontäne komplett auf Sidars Schoß. Nun ist Sidar eins mit dem stinkenden Zug.\nSidar regt sich für ${noDuellDice} auf.`
       );
@@ -291,7 +291,7 @@ if (sitzZweiteHaltestelle === 0) {
   console.clear();
   if (plasticShare === 0) {
     if (sidar.presents.length < 1) {
-      let noplasticShare = dices();
+      let noplasticShare = dices()*2;
       console.log(
         `Du hast nichts zum Tauschen, die Unbekannte schleckt mit der Stärke ${noplasticShare} Sidars ganzes Gesicht ab, hoffentlich kriegt das seine Freundin nie mit!`
       );
@@ -344,7 +344,7 @@ if (sitzZweiteHaltestelle === 0) {
 `);
       }
     } else if (thirdDice === 1) {
-      let kissDice = dices();
+      let kissDice = dices()*2;
       console.log(
         `Miss Plastic schleckt Sidar mitten durchs Gesicht und du ekelst dich für ${kissDice}.`
       );
@@ -396,7 +396,7 @@ else if (sitzZweiteHaltestelle === 1) {
   console.clear();
   if (altHelp === 0) {
     if (sidar.presents.length < 1) {
-      let altNoHelp = dices();
+      let altNoHelp = dices()*2;
       console.log(`Sidar hat leider nichts was ihm hilft.`);
       console.log(
         `Die Kinder machen sich immer weiter über Sidar lustig und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert. Mit der Stärke von ${altNoHelp}.`
@@ -450,7 +450,7 @@ else if (sitzZweiteHaltestelle === 1) {
 `);
       }
     } else if (diceFour === 1) {
-      let noDuellDice = dices();
+      let noDuellDice = dices()*2;
       console.log(
         `Die Kinder machen sich immer weiter Lustig über ihn, Passagiere fangen es an zu Filmen.
           Sidar ist total beschämt und regt sich für ${noDuellDice} darüber auf.`
@@ -498,7 +498,7 @@ if (sitzDritteHaltestelle === 0) {
   console.clear();
   if (pornoShare === 0) {
     if (sidar.presents.length < 1) {
-      let noPornoShare = dices();
+      let noPornoShare = dices()*2;
       console.log(
         `Sidar hat nichts in seinen Taschen.
                 
@@ -558,7 +558,7 @@ if (sitzDritteHaltestelle === 0) {
 `);
       }
     } else if (fifthDice === 1) {
-      let pornoDice = dices();
+      let pornoDice = dices()*2;
       console.log(
         `Der Perverse lässt Sidar keine Chance, mit einem schnellen Ruck spreizt er seinen Mantel und enthüllt sein ganzes Ich.
                 Sidars Augen sind weit aufgerissen, er ist geschockt, verweilt Blind in der Embryonalhaltung  mit dem Wissen, was das letzte eingebrannte Bild in seinen Kopf sein wird. Die Attecke des Pornobalkenträgers ekelt Sidar mit ${pornoDice}.`
@@ -590,7 +590,7 @@ else if (sitzDritteHaltestelle === 1) {
 
   if (dogTreat === 0) {
     if (sidar.presents.length < 1) {
-      let dogDice = dices();
+      let dogDice = dices()*2;
       console.log(`Sidar hat leider nichts für die Hunde.`);
       console.log(
         `Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
@@ -647,7 +647,7 @@ else if (sitzDritteHaltestelle === 1) {
 `);
       }
     } else if (dicefive === 1) {
-      let dogAttack = dices();
+      let dogAttack = dices()*2;
       console.log(
         `Sidar ist zu langsam. Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
                 Der Duft von Sidar wird seiner Freundin bestimmt gefallen. Die Pinkelattacke trifft Sidars bein mit: ${dogAttack}`
@@ -709,7 +709,7 @@ if (gehenOderBleiben === 0) {
   console.log(
     "“Sie sind aber ein ganz feiner Mann, ihre Freundin schätzt sich bestimmt glücklich.\n Aber Sie hören sich mit dem Husten auch nicht ganz so gesund an,\n hier nehmen Sie mein warmes Wasser, das beruhigt ihren Hustenreiz.”. Sidar bekommt eine eine Themoskanne mit heißem Wasser\n"
   );
-  let omiDice = dices();
+  let omiDice = dices()*0.5;
   console.log("Sidar beruhigt sich für: " + omiDice);
   sidar.presents.push("Thermoskanne");
   sidar.excitement -= omiDice;
@@ -717,7 +717,7 @@ if (gehenOderBleiben === 0) {
   console.log(
     "“Aber natürlich, Sie arbeiten bestimmt hart, das erinnert mich an damals,\n da sind wir noch 20km durch den Schnee zur Schule gelaufen, da war arbeit wirklich noch hart, nicht wie das meiste heute,\n ich meine was arbeitet man denn noch? Das sind doch alles keine Werte mehr und…..”\n Die alte Frau hörte einfach nicht auf zu reden und ging immer weiter ins Detail ihrer Lebensgeschichte.\n"
   );
-  let omiDice2 = dices();
+  let omiDice2 = dices() *3;
   sidar.excitement += omiDice2;
   console.log("Sidar regt sich " + omiDice2) + " auf.";
 } else {
@@ -752,7 +752,7 @@ console.clear();
 
 if (hot === 0) {
   console.log("Willst du mir sagen das ich sonst Fett aussehe???\n");
-  let hotDice1 = dices();
+  let hotDice1 = dices()*2;
   console.log(
     `Sidars Freundin ist sichtlich verärgert und dies verunsichert Sidar für: ${hotDice1}.`
   );
@@ -769,7 +769,7 @@ Sidar ist sichtlich irritiert und sein Puls steigt auf ${sidar.excitement}`);
   }
 } else if (hot === 1) {
   console.log("DU DENKST ALSO AN ANDERE FRAUEN????");
-  let hotDice2 = dices() * 2;
+  let hotDice2 = dices() * 3;
   console.log(`
   AUTSCH!!! Sidar springt mit Anlauf in das Fettnäpfchen und ist absolut angespannt. Er schluckt einmal tief und versucht durchzuatmen
   
