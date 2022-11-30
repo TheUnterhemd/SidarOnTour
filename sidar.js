@@ -864,8 +864,8 @@ if (sidar.presents.length < 1) {
 
   if (
     presentOne === "Beutel schwarzer Tee" &&
-    (presentOne === "Thermoskanne" || presentTwo === "Beutel schwarzer Tee" ||
-    presentTwo === "Thermoskanne")
+    presentTwo === "Thermoskanne" || presentTwo === "Beutel schwarzer Tee" ||
+    presentone === "Thermoskanne"
   ) {
     console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endBoss.nick}!“, eine Thermoskanne voller schwarzem Tee.
   ${endBoss.name} Augen beginnen zu funkeln als Sidar ihr ihren Lieblingstee überreicht. Sie umklammert seinen Arm und schenkt ihm einen verliebten Blick. “Aww du kennst mich ja wirklich! Komm! Wir gehen nach Hause, du legst die Füße hoch und ich koche uns etwas leckeres!”
