@@ -687,7 +687,7 @@ if (gehenOderBleiben === 0) {
     "Sidar lässt das ganze über sich ergehen und versucht so gut wie möglich das schlimmste auszublenden.\n"
   );
   console.log(
-    "“Sie sind aber ein ganz feiner Mann, ihre Freundin schätzt sich bestimmt glücklich.\n Aber Sie hören sich mit dem Husten auch nicht ganz so gesund an,\n hier nehmen Sie mein warmes Wasser, das beruhigt ihren Hustenreiz.”. Sidar bekommt eine eine Themoskanne mit heißem Wasser"
+    "\n“Sie sind aber ein ganz feiner Mann, ihre Freundin schätzt sich bestimmt glücklich.\n Aber Sie hören sich mit dem Husten auch nicht ganz so gesund an,\n hier nehmen Sie mein warmes Wasser, das beruhigt ihren Hustenreiz.”. Sidar bekommt eine eine Themoskanne mit heißem Wasser"
   );
   let omiDice = dices();
   console.log("Sidar regt sich auf für: " + sidar.excitement);
@@ -701,4 +701,6 @@ if (gehenOderBleiben === 0) {
   sidar.excitement += omiDice;
   console.clear();
 } else {
+  console.log("Sidar ist so genervt und verlässt weinend den Zug");
+  console.log(" G A M E   O V E R ");
 }
