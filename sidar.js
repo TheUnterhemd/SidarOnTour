@@ -303,10 +303,17 @@ if (sitzZweiteHaltestelle === 0) {
         "Was soll Sidar der Miss Plastic anbieten?"
       );
       console.clear();
+      if(missPlasticPresent === -1){
+        let noplasticShare = dices()*2;
+      console.log(
+        `Du hast nichts zum Tauschen, die Unbekannte schleckt mit der Stärke ${noplasticShare} Sidars ganzes Gesicht ab, hoffentlich kriegt das seine Freundin nie mit!`
+      );
+      }else
+      {
       console.log(
         `Die Miss Plastic bemerkt das sie ihre Tage bekommen hat und ist mit dem ${sidar.presents[missPlasticPresent]} auf die Toilette verschwunden.`
       );
-      sidar.presents.splice(missPlasticPresent, 1);
+      sidar.presents.splice(missPlasticPresent, 1);}
     }
   } else if (plasticShare === 1) {
     console.log("ZEIT FÜR EIN DU-DU-DUELL");
