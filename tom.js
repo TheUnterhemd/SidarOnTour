@@ -736,7 +736,12 @@ else{
 console.log("Die Situation schein Sidar aus den Händen zu gleiten und sein Puls rast. Doch Sidar gibt nicht auf und in ihm wächst die wohl beste Idee seines Lebens. Er kramt in seinen Taschen und sucht nach einem geschenk für seine Freundin.\n");
 console.log("Welche geschenke soll Sidar seiner Freundin geben?");
 
-let present1 = readlineSync.keyInSelect(sidar.presents, "Was soll Sidar auswählen?");
+if(sidar.presents.length < 1){
+    console.log("Sidar hat anscheinen nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER");
+    console.log("G A M E   O V E R");
+}
+else
+{let present1 = readlineSync.keyInSelect(sidar.presents, "Was soll Sidar auswählen?");
 let presentOne = sidar.presents[present1];
 sidar.presents.slice(present1,1)
 console.clear();
@@ -747,7 +752,7 @@ sidar.presents.slice(present2,1)
 console.clear();
 
 if(presentOne === "Beutel schwarzer Tee" || presentOne === "Thermoskanne" && presentTwo === "Beutel schwarzer Tee" || presentTwo === "Thermoskanne"){
-  console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endboss.nick}!“, eine Thermoskanne voller schwarzem Tee.
+  console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endBoss.nick}!“, eine Thermoskanne voller schwarzem Tee.
   ${enboss.name} Augen beginnen zu funkeln als Sidar ihr ihren Lieblingstee überreicht. Sie umklammert seinen Arm und schenkt ihm einen verliebten Blick. “Aww du kennst mich ja wirklich! Komm! Wir gehen nach Hause, du legst die Füße hoch und ich koche uns etwas leckeres!”
   Eine nervige Woche hatte endlich ihr Ende gefunden. Sidar kann sich nun unbekümmert mit seiner Freundin ausruhen bis die Hölle am Montag vom neuen Beginnt.`);
 }
@@ -756,5 +761,5 @@ else{
   “Was gibst du mir da? Bist du ein Psycho oder so????” Sie nimmt die Beine in die Hand und verschwindet so schnell es geht aus dem Sichtfeld von Sidar.
   Ich meine Seriously, wer kann es ihr verübeln? Verzieh dich wieder nach Leipzig!`);
   console.log("G A M E   O V E R");
-}
+}}
 
