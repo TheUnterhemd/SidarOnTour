@@ -785,7 +785,8 @@ Sidar ist sichtlich irritiert und sein Puls steigt auf ${sidar.excitement}`);
   sidar.excitement += hotDice2;
   if (sidar.excitement >= 180) {
     console.log(
-      "Sidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt"
+      "Sidars Apple Pulsuhr schlägt Alarm da sein Puls auf:"+sidar.excitement+
+      "\nSidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt"
     );
     console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
 `);
