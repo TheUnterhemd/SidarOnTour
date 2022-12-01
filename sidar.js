@@ -41,7 +41,7 @@ console.log(
 );
 
 console.log(
-  "Freitag, eine lange Woche voll mit nervigen Studenten neigt sich dem Ende.\nDas einzige was jetzt noch zwischen Sidar und seiner Feundin stehen sind 5 lange Haltestellen von Leipzig bis Marburg.\n"
+  "Freitag, eine lange Woche voll mit nervigen Studenten neigt sich dem Ende.\nDas Einzige was jetzt noch zwischen Sidar und seiner Feundin steht sind 5 lange Haltestellen von Leipzig bis Marburg.\n"
 );
 
 console.log(
@@ -96,7 +96,7 @@ console.log(
 );
 
 pas = ["Zu der Mutter und dem Blag", "Zu den Nichtfrisuren"];
-let sitz = readlineSync.keyInSelect(pas, "Wohin willst du dich setzen?");
+let sitz = readlineSync.keyInSelect(pas, "Wohin soll Sidar sich setzen?");
 console.clear();
 //Popelkind
 if (sitz === 0) {
@@ -112,7 +112,7 @@ if (sitz === 0) {
   console.clear();
   if (share === 0) {
     if (sidar.presents.length < 1) {
-      let noShare = dices() *2;
+      let noShare = dices() * 2;
       console.log(
         `Sidar hat leider nichts zum tauschen und das Balg trifft ihn mit einem Popel der Stärke ${noShare}.`
       );
@@ -152,9 +152,9 @@ if (sitz === 0) {
         sidar.presents.push("Tampon");
       } else if (sidar.dice < popel.dice) {
         console.log(
-          "Dein Taschentuch wird von dem kleinem Finger durchbohrt und Die Attacke des Jungen ist ein voller Erfolg, Sidar ist fast am kotzen und das saftige Grün hängt in seinem Gesicht."
+          "Sidars Taschentuch wird von dem kleinem Finger durchbohrt und Die Attacke des Jungen ist ein voller Erfolg, Sidar ist fast am kotzen und das saftige Grün hängt in seinem Gesicht."
         );
-        console.log(`Du regst dich für ${popel.dice - sidar.dice} auf.`);
+        console.log(`Sidar regt sich für ${popel.dice - sidar.dice} auf.`);
         sidar.excitement += popel.dice - sidar.dice;
         sidar.dice = 0;
       } else {
@@ -163,9 +163,9 @@ if (sitz === 0) {
 `);
       }
     } else if (firstDice === 1) {
-      let dice = dices()*2;
+      let dice = dices() * 2;
       console.log(
-        `Das Kind schmiert Sidar den Poppel mitten ins Gesicht und du ekelst dich für ${dice}.`
+        `Das Kind schmiert Sidar den Poppel mitten ins Gesicht und er ekelt sich für ${dice}.`
       );
       sidar.excitement += dice;
     } else {
@@ -196,7 +196,7 @@ else if (sitz === 1) {
   console.clear();
   if (help === 0) {
     if (sidar.presents.length < 1) {
-      let noHelp = dices()*2;
+      let noHelp = dices() * 2;
       console.log(
         `Sidar hat leider nichts zum helfen und der Hool trifft ihn mit einer Kotzattacke der Stärke ${noHelp}.`
       );
@@ -220,7 +220,7 @@ else if (sitz === 1) {
       let womit = new Passenger("Glatzkopp", 38);
       womit.dice = womit.excitement();
       console.log(
-        `Der ${womit.type} macht schon dicke Backen und es könnte eine Fontäne feinster Bierkotze mit Fruchtfleisch der Stärke ${womit.dice} über Sidar ergehen.`
+        `Der ${womit.type} macht schon dicke Backen und es könnte eine Fontäne feinster Bierkotze mit Bratwurstbröckchen der Stärke ${womit.dice} über Sidar ergehen.`
       );
       sidar.dice = dices();
       console.log(
@@ -244,7 +244,7 @@ else if (sitz === 1) {
 `);
       }
     } else if (secondDice === 1) {
-      let noDuellDice = dices()*2;
+      let noDuellDice = dices() * 2;
       console.log(
         `Der Hool kotzt mit einer formgleichen Fontäne komplett auf Sidars Schoß. Nun ist Sidar eins mit dem stinkenden Zug.\nSidar regt sich für ${noDuellDice} auf.`
       );
@@ -265,16 +265,16 @@ console.log(
   "\nEin neuer Schwall Menschen betritt den überfüllten Zug und reichert diesen mit Schweißgeruch an.\n"
 );
 console.log(
-  "Deine Sitznachbarn sind ausgestiegen, auf dem Viererplatz neben dir setzen sich zwei Schüler und zocken auf einer Switch, \n"
+  "Seine Sitznachbarn sind ausgestiegen, auf dem Viererplatz neben Sidar setzen sich zwei Schüler und zocken auf einer Switch, \n"
 );
 
 console.log(
-  "auf dem Platz direkt neben dir setzt sich eine, du schätzt junge Frau, wobei diese aus 98% Plastik besteht und Sie genauso gut 69 sein könnte.\n"
+  "auf dem Platz direkt neben Sidar setzt sich eine, er schätzt junge Frau, wobei diese aus 98% Plastik besteht und Sie genauso gut 69 sein könnte.\n"
 );
 
 pos = ["Bei Miss Plastic sitzen bleiben", "Zu den Schülern setzen."];
 
-sitzZweiteHaltestelle = readlineSync.keyInSelect(pos, "Was willst du tun?");
+sitzZweiteHaltestelle = readlineSync.keyInSelect(pos, "Was soll er tun?");
 console.clear();
 
 //Plastik püpchen
@@ -291,9 +291,9 @@ if (sitzZweiteHaltestelle === 0) {
   console.clear();
   if (plasticShare === 0) {
     if (sidar.presents.length < 1) {
-      let noplasticShare = dices()*2;
+      let noplasticShare = dices() * 2;
       console.log(
-        `Du hast nichts zum Tauschen, die Unbekannte schleckt mit der Stärke ${noplasticShare} Sidars ganzes Gesicht ab, hoffentlich kriegt das seine Freundin nie mit!`
+        `Sidar hat nichts zum Tauschen, die Unbekannte schleckt mit der Stärke ${noplasticShare} sein ganzes Gesicht ab, hoffentlich kriegt das seine Freundin nie mit!`
       );
       console.log("Der Puls von Sidar steigt auf: " + sidar.excitement);
       sidar.excitement += noplasticShare;
@@ -303,17 +303,17 @@ if (sitzZweiteHaltestelle === 0) {
         "Was soll Sidar der Miss Plastic anbieten?"
       );
       console.clear();
-      if(missPlasticPresent === -1){
-        let noplasticShare = dices()*2;
-      console.log(
-        `Du hast nichts zum Tauschen, die Unbekannte schleckt mit der Stärke ${noplasticShare} Sidars ganzes Gesicht ab, hoffentlich kriegt das seine Freundin nie mit!`
-      );
-      }else
-      {
-      console.log(
-        `Die Miss Plastic bemerkt das sie ihre Tage bekommen hat und ist mit dem ${sidar.presents[missPlasticPresent]} auf die Toilette verschwunden.`
-      );
-      sidar.presents.splice(missPlasticPresent, 1);}
+      if (missPlasticPresent === -1) {
+        let noplasticShare = dices() * 2;
+        console.log(
+          `Sidar hat nichts zum Tauschen, die Unbekannte schleckt mit der Stärke ${noplasticShare} Sidars ganzes Gesicht ab, hoffentlich kriegt das seine Freundin nie mit!`
+        );
+      } else {
+        console.log(
+          `Die Miss Plastic bemerkt das sie ihre Tage bekommen hat und ist mit dem ${sidar.presents[missPlasticPresent]} auf die Toilette verschwunden.`
+        );
+        sidar.presents.splice(missPlasticPresent, 1);
+      }
     }
   } else if (plasticShare === 1) {
     console.log("ZEIT FÜR EIN DU-DU-DUELL");
@@ -342,7 +342,9 @@ if (sitzZweiteHaltestelle === 0) {
         console.log(
           "Sidars hektisches ausweichen hat nichts gebracht, Miss Plastics Attacke ist ein voller erfolg und sie schleckt sein ganzes gesicht ab, hoffentlich kriegt das seine Freundin nie mit!"
         );
-        console.log(`Du regst dich für ${missPlastic.dice - sidar.dice} auf.`);
+        console.log(
+          `Sidar regt sich für ${missPlastic.dice - sidar.dice} auf.`
+        );
         sidar.excitement += missPlastic.dice - sidar.dice;
         sidar.dice = 0;
       } else {
@@ -351,9 +353,9 @@ if (sitzZweiteHaltestelle === 0) {
 `);
       }
     } else if (thirdDice === 1) {
-      let kissDice = dices()*2;
+      let kissDice = dices() * 2;
       console.log(
-        `Miss Plastic schleckt Sidar mitten durchs Gesicht und du ekelst dich für ${kissDice}.`
+        `Miss Plastic schleckt Sidar mitten durchs Gesicht und er ekelt sich für ${kissDice}.`
       );
       sidar.excitement += kissDice;
     } else {
@@ -381,7 +383,7 @@ else if (sitzZweiteHaltestelle === 1) {
   ];
   let antwortenZuSchüler = readlineSync.keyInSelect(
     schülerAnfang,
-    "Was willst du sagen?\n"
+    "Was soll Sidar sagen?\n"
   );
   console.clear();
   if (antwortenZuSchüler === 0) {
@@ -403,7 +405,7 @@ else if (sitzZweiteHaltestelle === 1) {
   console.clear();
   if (altHelp === 0) {
     if (sidar.presents.length < 1) {
-      let altNoHelp = dices()*2;
+      let altNoHelp = dices() * 2;
       console.log(`Sidar hat leider nichts was ihm hilft.`);
       console.log(
         `Die Kinder machen sich immer weiter über Sidar lustig und der ganze Zug beäugt das ganze Szenario sichtlich amüsiert. Mit der Stärke von ${altNoHelp}.`
@@ -457,9 +459,9 @@ else if (sitzZweiteHaltestelle === 1) {
 `);
       }
     } else if (diceFour === 1) {
-      let noDuellDice = dices()*2;
+      let noDuellDice = dices() * 2;
       console.log(
-        `Die Kinder machen sich immer weiter Lustig über ihn, Passagiere fangen es an zu Filmen.
+        `Die Kinder machen sich immer weiter Lustig über ihn, Passagiere fangen an es zu Filmen.
           Sidar ist total beschämt und regt sich für ${noDuellDice} darüber auf.`
       );
       sidar.excitement += noDuellDice;
@@ -505,7 +507,7 @@ if (sitzDritteHaltestelle === 0) {
   console.clear();
   if (pornoShare === 0) {
     if (sidar.presents.length < 1) {
-      let noPornoShare = dices()*2;
+      let noPornoShare = dices() * 2;
       console.log(
         `Sidar hat nichts in seinen Taschen.
                 
@@ -556,7 +558,9 @@ if (sitzDritteHaltestelle === 0) {
         console.log(
           `Es schein als wäre Sidar nun mit dem Peversen alleine im Abteil und die Atttacke von ${misterPorno.type} brennt sich in Sidars Kopf.`
         );
-        console.log(`Du regst dich für ${misterPorno.dice - sidar.dice} auf.`);
+        console.log(
+          `Sidar regt sich für ${misterPorno.dice - sidar.dice} auf.`
+        );
         sidar.excitement += misterPorno.dice - sidar.dice;
         sidar.dice = 0;
       } else {
@@ -565,7 +569,7 @@ if (sitzDritteHaltestelle === 0) {
 `);
       }
     } else if (fifthDice === 1) {
-      let pornoDice = dices()*2;
+      let pornoDice = dices() * 2;
       console.log(
         `Der Perverse lässt Sidar keine Chance, mit einem schnellen Ruck spreizt er seinen Mantel und enthüllt sein ganzes Ich.
                 Sidars Augen sind weit aufgerissen, er ist geschockt, verweilt Blind in der Embryonalhaltung  mit dem Wissen, was das letzte eingebrannte Bild in seinen Kopf sein wird. Die Attecke des Pornobalkenträgers ekelt Sidar mit ${pornoDice}.`
@@ -597,7 +601,7 @@ else if (sitzDritteHaltestelle === 1) {
 
   if (dogTreat === 0) {
     if (sidar.presents.length < 1) {
-      let dogDice = dices()*2;
+      let dogDice = dices() * 2;
       console.log(`Sidar hat leider nichts für die Hunde.`);
       console.log(
         `Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
@@ -654,10 +658,10 @@ else if (sitzDritteHaltestelle === 1) {
 `);
       }
     } else if (dicefive === 1) {
-      let dogAttack = dices()*2;
+      let dogAttack = dices() * 2;
       console.log(
         `Sidar ist zu langsam. Der wohlerzogene Chihuahua macht es sich auf Sidars Tasche zum kacken gemütlich, gerade als er etwas sagen will, wird ihm aber von einem anderen schon ans Bein gepisst. Das Frauchen kann sich das lachen nicht verkneifen.
-                Der Duft von Sidar wird seiner Freundin bestimmt gefallen. Die Pinkelattacke trifft Sidars bein mit: ${dogAttack}`
+                Der Duft von Sidar wird seiner Freundin bestimmt gefallen. Die Pinkelattacke trifft Sidars Bein mit: ${dogAttack}`
       );
       sidar.excitement += dogAttack;
     } else {
@@ -716,7 +720,7 @@ if (gehenOderBleiben === 0) {
   console.log(
     "“Sie sind aber ein ganz feiner Mann, ihre Freundin schätzt sich bestimmt glücklich.\n Aber Sie hören sich mit dem Husten auch nicht ganz so gesund an,\n hier nehmen Sie mein warmes Wasser, das beruhigt ihren Hustenreiz.”. Sidar bekommt eine eine Themoskanne mit heißem Wasser\n"
   );
-  let omiDice = dices()*0.5;
+  let omiDice = dices() * 0.5;
   console.log("Sidar beruhigt sich für: " + omiDice);
   sidar.presents.push("Thermoskanne");
   sidar.excitement -= omiDice;
@@ -724,7 +728,7 @@ if (gehenOderBleiben === 0) {
   console.log(
     "“Aber natürlich, Sie arbeiten bestimmt hart, das erinnert mich an damals,\n da sind wir noch 20km durch den Schnee zur Schule gelaufen, da war arbeit wirklich noch hart, nicht wie das meiste heute,\n ich meine was arbeitet man denn noch? Das sind doch alles keine Werte mehr und…..”\n Die alte Frau hörte einfach nicht auf zu reden und ging immer weiter ins Detail ihrer Lebensgeschichte.\n"
   );
-  let omiDice2 = dices() *3;
+  let omiDice2 = dices() * 3;
   sidar.excitement += omiDice2;
   console.log("Sidar regt sich " + omiDice2) + " auf.";
 } else {
@@ -759,13 +763,13 @@ console.clear();
 
 if (hot === 0) {
   console.log("Willst du mir sagen das ich sonst Fett aussehe???\n");
-  let hotDice1 = dices()*2;
+  let hotDice1 = dices() * 2;
   console.log(
     `Sidars Freundin ist sichtlich verärgert und dies verunsichert Sidar für: ${hotDice1}.`
   );
   sidar.excitement += hotDice1;
   if (sidar.excitement >= 180) {
-    console.clear()
+    console.clear();
     console.log(
       "Sidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt"
     );
@@ -785,8 +789,9 @@ Sidar ist sichtlich irritiert und sein Puls steigt auf ${sidar.excitement}`);
   sidar.excitement += hotDice2;
   if (sidar.excitement >= 180) {
     console.log(
-      "Sidars Apple Pulsuhr schlägt Alarm da sein Puls auf:"+sidar.excitement+
-      "\nSidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt"
+      "Sidars Apple Pulsuhr schlägt Alarm da sein Puls auf:" +
+        sidar.excitement +
+        "\nSidars Kopf läuft rot an, Seine Augen sind Blutunterlaufen und er fängt an zu zittern. Sidar springt wieder in den Zug und flüchtet, bevor er einen Herzkasper bekommt"
     );
     console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
 `);
@@ -835,13 +840,13 @@ if (beautiful === 0) {
 }
 
 console.log(
-  "Die Situation schein Sidar aus den Händen zu gleiten und sein Puls rast. Doch Sidar gibt nicht auf und in ihm wächst die wohl beste Idee seines Lebens. Er kramt in seinen Taschen und sucht nach einem geschenk für seine Freundin.\n"
+  "Die Situation scheint Sidar aus den Händen zu gleiten und sein Puls rast. Doch er gibt nicht auf und in ihm wächst die wohl beste Idee seines Lebens. Er kramt in seinen Taschen und sucht nach einem geschenk für seine Freundin.\n"
 );
 console.log("Welche geschenke soll Sidar seiner Freundin geben?");
 
 if (sidar.presents.length < 1) {
   console.log(
-    "Sidar hat anscheinen nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER"
+    "Sidar hat anscheinend nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER"
   );
   console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
 `);
@@ -855,35 +860,36 @@ if (sidar.presents.length < 1) {
   console.clear();
   if (sidar.presents.length < 1) {
     console.log(
-      "Sidar hat anscheinen nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER"
+      "Sidar hat anscheinend nichts mehr in seinen Taschen. Seine Freundin wird immer grimmiger und gereizter. Sie schickt Ihn weg mit den Worten: Verpiss dich Du LOSER"
     );
     console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
   `);
-  } else{
-  console.log(
-    "Da Frauen Geschenke mögen, will sidar Ihr nicht nur eines geben."
-  );
-  let present2 = readlineSync.keyInSelect(
-    sidar.presents,
-    "Was soll Sidar auswählen?"
-  );
-  let presentTwo = sidar.presents[present2];
-  sidar.presents.splice(present2, 1);
-  console.clear();
+  } else {
+    console.log(
+      "Da Frauen Geschenke mögen, will sidar Ihr nicht nur eines geben."
+    );
+    let present2 = readlineSync.keyInSelect(
+      sidar.presents,
+      "Was soll Sidar auswählen?"
+    );
+    let presentTwo = sidar.presents[present2];
+    sidar.presents.splice(present2, 1);
+    console.clear();
 
-  if (
-    presentOne === "Beutel schwarzer Tee" &&
-    presentTwo === "Thermoskanne" || presentTwo === "Beutel schwarzer Tee" &&
-    presentOne === "Thermoskanne"
-  ) {
-    console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endBoss.nick}!“, eine Thermoskanne voller schwarzem Tee.
+    if (
+      (presentOne === "Beutel schwarzer Tee" &&
+        presentTwo === "Thermoskanne") ||
+      (presentTwo === "Beutel schwarzer Tee" && presentOne === "Thermoskanne")
+    ) {
+      console.log(`Sidar hat die Idee seines Lebens und schenkt Ihr, mit den Worten: “Hier ${endBoss.nick}!“, eine Thermoskanne voller schwarzem Tee.
   ${endBoss.name} Augen beginnen zu funkeln als Sidar ihr ihren Lieblingstee überreicht. Sie umklammert seinen Arm und schenkt ihm einen verliebten Blick. “Aww du kennst mich ja wirklich! Komm! Wir gehen nach Hause, du legst die Füße hoch und ich koche uns etwas leckeres!”
   Eine nervige Woche hatte endlich ihr Ende gefunden. Sidar kann sich nun unbekümmert mit seiner Freundin ausruhen bis die Hölle am Montag vom neuen Beginnt.`);
-  } else {
-    console.log(`
+    } else {
+      console.log(`
   “Was gibst du mir da? Bist du ein Psycho oder so????” Sie nimmt die Beine in die Hand und verschwindet so schnell es geht aus dem Sichtfeld von Sidar.
   Ich meine Seriously, wer kann es ihr verübeln? Verzieh dich wieder nach Leipzig!`);
-    console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
+      console.log(`  _____                 ____              \r\n \/ ___\/__ ___ _  ___   \/ __ \\_  _____ ____\r\n\/ (_ \/ _ \`\ / \' \\\/ -_) \/ \/_\/ \/ |\/ \/ -_) __\/\r\n\\___\/\\_,_\/_\/_\/_\/\\__\/  \\____\/|___\/\\__\/_\/   \r\n                                          
 `);
-  }}
+    }
+  }
 }
