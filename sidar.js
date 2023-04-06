@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync");
 
-// Personen
+// Person control app
 
 let sidar = {
   name: "Sidar",
